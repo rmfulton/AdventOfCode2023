@@ -6,12 +6,6 @@ class Hand:
     def __repr__(self):
         return self.s + f" {self.ranking}"+ f" {self.bid}"
 
-    def rank_string(self, s):
-        L = []
-        for c in s:
-            L.append(getRankOfChar(c))
-        return [get_order(s)] + L
-
 def main():
     fname = "./sample.txt"
     lines = getLines(fname)
