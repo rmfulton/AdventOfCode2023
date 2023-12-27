@@ -24,11 +24,12 @@ def answer(lines):
             g.append(line)
     for grid in grids:
         h = horizontalTest(grid)
+        v = verticalTest(grid)
         if h:
             total += h
         else:
             v = verticalTest(grid)
-            total += verticalTest(grid)
+            total += v
     return total
 
 def horizontalTest(g):
@@ -36,7 +37,9 @@ def horizontalTest(g):
     for row in g:
         num = toNum(row)
         nums.append(num)
-    return reflectionAt(nums)*100
+    ans = reflectionAt(nums)*100
+
+    return ans
 
 def verticalTest(g):
     n = len(g)
@@ -45,7 +48,8 @@ def verticalTest(g):
     for i in range(m):
         num = toNum([g[j][i] for j in range(n)])
         nums.append(num)
-    return reflectionAt(nums)
+    ans = reflectionAt(nums)
+    return ans
 
 def toNum(r):
     num = 0
@@ -58,16 +62,21 @@ def toNum(r):
 def reflectionAt(nums):
     n = len(nums)
     for i in range(n-1):
-        perfectReflection = True
+        numChanges = 0
+
         w = min(i+1, n - i - 1)
         for j in range(w):
             L = i - j
             R = i + 1 + j
-            if nums[L] != nums[R]:
-                perfectReflection = False
-                break
-        if perfectReflection:
+            numChanges += numOnesInBinary(nums[L] ^ nums[R])
+        if numChanges == 1:
             return i+1
     return 0
 
+def numOnesInBinary(number):
+    count = 0
+    while number > 0:
+        count += number % 2
+        number = number>>1
+    return count
 main() 
