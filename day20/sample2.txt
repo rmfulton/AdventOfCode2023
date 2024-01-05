@@ -1,0 +1,99 @@
+stateInfo:
+
+jv: 1
+fb: 9
+rr: 1
+gp: 8
+hm: 1 20
+cf: 1
+cg: 1
+hv: 1
+hs: 1
+bd: 1
+xv: 1
+js: 1
+rn: 1
+lp: 1
+dx: 1 30
+ss: 1
+hn: 1 (&)
+bh: 1
+km: 1
+mv: 1
+jl: 7 42
+pt: 1
+cb: 1
+xt: 1
+kg: 1
+dg: 1
+rt: 1
+broadcaster: 0
+lr: 1
+vm: 1 50
+hx: 1
+mp: 1 (&)
+hb: 1
+vk: 1
+kl: 1
+pk: 1
+jt: 1 
+jn: 7 64
+bg: 1
+kz: 1
+bf: 1
+bk: 1
+qm: 1
+fx: 1 70
+dp: 1
+jf: 1
+jm: 1
+ql: 1
+ms: 1
+zb: 1
+rs: 1
+dt: 1
+lm: 1
+xf: 1 (&) 80
+pd: 1
+qd: 1
+xn: 4
+fz: 1 (&) 87
+
+conjunctions:
+
+fb
+gp
+hn
+jl
+mp
+jn
+xf
+fz
+Can we simplify this circuit?
+
+1: km, xt, pk
+JL [js: 0, bh: 0, km: 1, pt: 0, hx: 0, jt: 0, qd: 0]
+
+(button, 0, broadcaster) X
+(broadcaster, 0, km) X
+(broadcaster, 0, xt) X
+(broadcaster, 0, pk) X 
+(broadcaster, 0, vk) X
+(km, 1, jl) X
+(km, 1, lm) X
+(xt, 1, jn)
+(xt, 1, jf)
+(pk, 1, gp)
+(pk, 1, cb)
+(vk, 1, cg)
+(vk, 1, fb)
+(jl, 1, km)
+(jl, 1, lm)
+(jl, 1, ms)
+(jl, 1, mp)
+(jl, 1, lr)
+(jl, 1, zb)
+(jl, 1, bg)
+
+
+
