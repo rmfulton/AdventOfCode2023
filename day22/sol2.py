@@ -108,7 +108,7 @@ class Bricks:
 
 
 def main():
-    fname = "/Users/rmfulton/Documents/Everything/code/play/adventOfCode/AdventOfCode2023/day22/input.txt"
+    fname = "./input.txt"
     lines = getLines(fname)
     res = answer(lines)
     print(res)
